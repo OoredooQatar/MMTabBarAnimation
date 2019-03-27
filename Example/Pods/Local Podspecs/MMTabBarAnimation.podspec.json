@@ -1,9 +1,9 @@
 {
   "name": "MMTabBarAnimation",
-  "version": "0.1.0",
-  "summary": "A short description of MMTabBarAnimation.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/MMTabBarAnimation",
+  "version": "0.2.9",
+  "summary": "Custom TabBar Animation",
+  "description": "Custom Animation on tabBar Item",
+  "homepage": "https://github.com/MillmanY/MMTabBarAnimation",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "Millman YANG": "millmanyang@gmail.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/MMTabBarAnimation.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/MillmanY/MMTabBarAnimation.git",
+    "tag": "0.2.9"
   },
   "platforms": {
     "ios": "8.0"

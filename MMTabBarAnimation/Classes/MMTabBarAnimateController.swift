@@ -89,9 +89,9 @@ extension MMTabBarAnimateController {
     fileprivate func resetBarItem() {
         if let classType = NSClassFromString("UITabBarButton") {
 
-            let tabBarSubView = tabBar.subviews.flatMap({ (vi) -> UIView? in
+            let tabBarSubView = tabBar.subviews.compactMap({ (vi) -> UIView? in
                 return vi.isKind(of: classType) ? vi : nil
-            }).sorted(by: {  $0.0.frame.origin.x < $0.1.frame.origin.y })
+            }).sorted(by: {  $0.frame.origin.x < $1.frame.origin.y })
             
             tabBarSubView.enumerated().forEach({ (idx,view) in
                 animateItems[idx].item = tabBar.items?[idx]

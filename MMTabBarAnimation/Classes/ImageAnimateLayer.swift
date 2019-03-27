@@ -17,13 +17,13 @@ class ImageAnimateLayer: CAShapeLayer {
     
     func animate(show:Bool , duration:TimeInterval) {
         let animate = CABasicAnimation.init(keyPath: "transform.scale")
-        animate.timingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+        animate.timingFunction = CAMediaTimingFunction.init(name: CAMediaTimingFunctionName.easeOut)
         animate.duration = duration
         animate.fromValue = show ? 0.0 : 1.2
         animate.toValue = show ? 1.2 : 0.0
         animate.isRemovedOnCompletion = false
         animate.delegate = self
-        animate.fillMode = kCAFillModeBoth
+        animate.fillMode = CAMediaTimingFillMode.both
         self.mask = generateMask()
         self.mask?.add(animate, forKey: "Scale")
     }

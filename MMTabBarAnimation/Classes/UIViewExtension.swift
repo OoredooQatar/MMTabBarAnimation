@@ -28,7 +28,7 @@ public struct TabBarAnimate {
     public func rotation(type:RotationType) {
         switch type {
             case .left,.right:
-            let option:UIViewAnimationOptions = (type == .left) ? .transitionFlipFromLeft : .transitionFlipFromRight
+            let option:UIView.AnimationOptions = (type == .left) ? .transitionFlipFromLeft : .transitionFlipFromRight
             UIView.transition(with: self.view, duration: duration, options: option, animations: nil, completion: nil)
             case .circle:
                 self.rotaitonZ()
@@ -39,7 +39,7 @@ public struct TabBarAnimate {
         
         let animation = CABasicAnimation(keyPath: "transform.rotation.z")
         animation.fromValue = 0.0
-        animation.toValue = CGFloat(M_PI * 2.0)
+        animation.toValue = CGFloat(Double.pi * 2.0)
         animation.duration = duration
         animation.isRemovedOnCompletion = false
         self.view.layer.add(animation, forKey: "Rotation")
